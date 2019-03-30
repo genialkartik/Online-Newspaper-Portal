@@ -1,0 +1,97 @@
+/*------- to make navigation bar sticky on scrolling */
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("topicmenu");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+    
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "25%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+
+
+/*   sign up javascript    */
+
+ var t=setTimeout(openModal,4000);
+
+var modal = document.getElementById('simpleModal');
+
+var modalBtn = document.getElementById('modalBtn');
+
+var span = document.getElementsByClassName("close")[0];
+
+var cancelbtn=document.getElementsByClassName('cancelbtn')[0];
+
+cancelbtn.addEventListener('click', closeModal);
+
+
+window.addEventListener('click', outsideClick);
+
+
+function openModal(){
+  modal.style.display = 'block';
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+
+
+
+
+
+
+function outsideClick(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
+
+
+
+
+
+var Mmodal = document.getElementById('1');
+
+
+window.onclick = function(event) {
+    if (event.target == Mmodal) {
+        Mmodal.style.display = "none";
+    }
+}
+
+
+
+
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
